@@ -1,0 +1,21 @@
+<h1>recipe</h1>
+
+<ul>
+    {% for i in recipe%}
+    <li>
+        {{i.title}}
+    </li>
+    <li>
+        By: <a href='{% url 'author' id=i.author.id %}'>{{ i.author }}</a>
+    </li>
+    <li>
+        Time to make: {{i.req_time}}
+    </li>
+    <li>
+        {{i.description}}
+    </li>
+    <li>
+        {{i.instructions}}
+    </li>
+    {% endfor%}
+</ul>
