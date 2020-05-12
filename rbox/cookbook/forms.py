@@ -10,6 +10,12 @@ class RecipeAddForm(forms.Form):
     author = forms.ModelChoiceField(queryset=Author.objects.all())
 
 class AuthorAddForm(forms.ModelForm):
+    username = forms.CharField(max_length =42)
+    password = forms.CharField(widget=forms.PasswordInput)
     class Meta:
         fields = ['name','bio']
         model = Author
+
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length =42)
+    password = forms.CharField(widget=forms.PasswordInput)
