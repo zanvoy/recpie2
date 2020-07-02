@@ -1,8 +1,9 @@
 <h1>Author</h1>
 
+{{person.name}}
+<br>
 Bio: {{person.bio}}
 
-{{person.name}}
 {% for i in recipe%}
 <li>
     <a href='{% url 'recipe' id=i.id %}'>{{i}}</a>
